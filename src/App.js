@@ -5,19 +5,22 @@ function App() {
   return (
     <div className="App">
         <nav className="nav">
-          <div>
+          <div className="navButton">
             HWARA JO
           </div>
-          <div>
+          <div className="navButton">
             INVENTORY
           </div>
-          <div>
+          <div className="navButton">
             ABOUT
           </div>
-          <div>
+          <div className="navButton">
             *
           </div>
         </nav>
+        <div className="main1"></div>
+        <div className="main2"></div>
+        
     </div>
   );
 }

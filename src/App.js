@@ -74,7 +74,7 @@ function Inventory(){
     
     setBgColor2(colors[idx2].bgcolor);
   }, []);
-  
+
   return (
     <div className="mainDiv">
       <div className="main1" style={{backgroundColor: bgColor}}>
@@ -101,16 +101,16 @@ function App() {
   return (
     <div className="App">
       <nav className="nav">
-        <div className="navButton">
+        <div className="navButton home">
           <NavLink to="/">HWARA JO</NavLink>
         </div>
-        <div className="navButton">
+        <div className="navButton inventory">
           <NavLink to="/Inventory">INVENTORY</NavLink>
         </div>
-        <div className="navButton">
+        <div className="navButton about">
           <NavLink to="/About">ABOUT</NavLink>
         </div>
-        <div className="navButton">
+        <div className="navButton more">
           <NavLink to="/More">*</NavLink>
         </div>
       </nav>

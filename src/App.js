@@ -48,8 +48,46 @@ function Home() {
 }
 
 function Inventory(){
+  const colors=[
+    {bgcolor:'#009884'},
+    {bgcolor:'#005528'},
+    {bgcolor:'#6EC8EB'},
+    {bgcolor:'#531916'},
+    {bgcolor:'#FED36F'},
+    {bgcolor:'#B4D2C1'},
+    {bgcolor:'#4C2859'},
+    {bgcolor:'#3981C0'},
+    {bgcolor:'#F19E46'}
+  ];
+
+  const [bgColor, setBgColor] = useState('');
+  const [bgColor2, setBgColor2] = useState('');
+
+  useEffect(() => {
+    const idx = Math.floor(Math.random() * colors.length);
+    setBgColor(colors[idx].bgcolor);
+
+    let idx2;
+    do {
+      idx2 = Math.floor(Math.random() * colors.length);
+    } while (idx2 === idx);
+    
+    setBgColor2(colors[idx2].bgcolor);
+  }, []);
+  
   return (
-    <div>쀼쀼</div>
+    <div className="mainDiv">
+      <div className="main1" style={{backgroundColor: bgColor}}>
+        222222222<br></br>
+        222222222222<br></br>
+        22222222222<br></br>
+        22222222222222<br></br>
+        2222222222222<br></br>
+        2222222222<br></br>
+        2222222222222<br></br>
+      </div>
+      <div className="main2" style={{backgroundColor: bgColor2}}></div>
+    </div>
   );
 }
 

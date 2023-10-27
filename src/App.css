@@ -2,6 +2,11 @@
   color: white;
   transition-duration: 400ms;
 }
+
+.navButton:checked > a{
+  color: white;
+}
+
 .navButton > a {
   text-decoration: none;
   color: black;
@@ -9,6 +14,7 @@
   width: 100%;
   height: 100%;
 }
+
 @media all and (orientation:landscape){
   .App {
     text-align: center;
@@ -18,12 +24,33 @@
   
   .mainDiv {
     width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mainDivHome {
+    width: 100%;
+    overflow-y: scroll;
     display: flex;
     justify-content: space-between;
   }
 
   .nav {
     width: 100%;
+    height: 31px;
+    background-color: rgba( 255, 255, 255, 0 );
+    display: flex;
+    justify-content: space-around;
+    font-size: 23px;
+    font-weight: 500;
+    position: fixed;
+    border-bottom: 1px solid black;
+  }
+
+  .homeNav {
+    width: 100%;
+    height: 31px;
     background-color: rgba( 255, 255, 255, 0 );
     display: flex;
     justify-content: space-around;
@@ -61,6 +88,15 @@
 
   .mainDiv {
     width: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mainDivHome {
+    width: 100%;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -68,6 +104,19 @@
   
   .nav {
     width: 100%;
+    height: 31px;
+    background-color: rgba( 255, 255, 255, 0 );
+    display: flex;
+    justify-content: space-around;
+    font-size: 23px;
+    font-weight: 500;
+    position: fixed;
+    border-bottom: 1px solid black;
+  }
+
+  .homeNav {
+    width: 100%;
+    height: 31px;
     background-color: rgba( 255, 255, 255, 0 );
     display: flex;
     justify-content: space-around;

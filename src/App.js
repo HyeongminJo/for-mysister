@@ -1,34 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
 import { HashRouter, Route, Routes, NavLink, useParams } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import logoImg from './logo.png';
 
 function Home() {
-  const colors=[
-    {bgcolor:'#009884'},
-    {bgcolor:'#005528'},
-    {bgcolor:'#6EC8EB'},
-    {bgcolor:'#531916'},
-    {bgcolor:'#FED36F'},
-    {bgcolor:'#B4D2C1'},
-    {bgcolor:'#4C2859'},
-    {bgcolor:'#3981C0'},
-    {bgcolor:'#F19E46'}
+  const images = [
+    "/img/1.jpg", 
+    "/img/2.jpg", 
+    "/img/3.png", 
+    "/img/4.png", 
+    "/img/5.jpg", 
+    "/img/6.png", 
+    "/img/7.png", 
+    "/img/8.png", 
+    "/img/9.jpg", 
+    "/img/10.png", 
+    "/img/11.png", 
+    "/img/12.png"
   ];
 
-  const [bgColor, setBgColor] = useState('');
-  const [bgColor2, setBgColor2] = useState('');
+  const [bgImage, setBgImage] = useState('');
+  const imageIndexRef = useRef(0);
 
   useEffect(() => {
-    const idx = Math.floor(Math.random() * colors.length);
-    setBgColor(colors[idx].bgcolor);
+    const intervalId = setInterval(() => {
+      // 이미지 인덱스를 다음 이미지로 이동
+      imageIndexRef.current = (imageIndexRef.current + 1) % images.length;
+      setBgImage(images[imageIndexRef.current]);
+    }, 400);
 
-    let idx2;
-    do {
-      idx2 = Math.floor(Math.random() * colors.length);
-    } while (idx2 === idx);
-    
-    setBgColor2(colors[idx2].bgcolor);
+    return () => {
+      // 컴포넌트가 언마운트되면 clearInterval을 호출하여 인터벌을 정리합니다.
+      clearInterval(intervalId);
+    };
   }, []);
 
     return (
@@ -36,6 +41,9 @@ function Home() {
       <nav className="homeNav">
         <div className="navButton home">
           <NavLink to="/">HWARA JO</NavLink>
+        </div>
+        <div className="navButton home2">
+          <NavLink to="/"><img class="logoImg" src={logoImg} alt="logo"/> </NavLink>
         </div>
         <div className="navButton inventory">
           <NavLink to="/Inventory">INVENTORY</NavLink>
@@ -47,7 +55,7 @@ function Home() {
           <NavLink to="/More">*</NavLink>
         </div>
       </nav>
-      <div className="main1" style={{backgroundColor: bgColor}}>
+      <div className="homeMain1" style={{backgroundImage: `url(${bgImage})`}}>
         여기 메인임<br></br>
         여기 메인임<br></br>
         여기 메인임<br></br>
@@ -56,7 +64,7 @@ function Home() {
         여기 메인임<br></br>
         여기 메인임<br></br>
       </div>
-      <div className="main2" style={{backgroundColor: bgColor2}}></div>
+      <div className="homeMain2" style={{backgroundImage: `url(${bgImage})`}}></div>
     </div>
   );
 }
@@ -94,6 +102,9 @@ function Inventory(){
       <nav className="nav">
         <div className="navButton home">
           <NavLink to="/">HWARA JO</NavLink>
+        </div>
+        <div className="navButton home2">
+          <NavLink to="/"><img class="logoImg" src={logoImg} alt="logo"/> </NavLink>
         </div>
         <div className="navButton inventory">
           <NavLink to="/Inventory">INVENTORY</NavLink>
@@ -223,6 +234,9 @@ function About() {
         <div className="navButton home">
           <NavLink to="/">HWARA JO</NavLink>
         </div>
+        <div className="navButton home2">
+          <NavLink to="/"><img class="logoImg" src={logoImg} alt="logo"/> </NavLink>
+        </div>
         <div className="navButton inventory">
           <NavLink to="/Inventory">INVENTORY</NavLink>
         </div>
@@ -280,6 +294,9 @@ function More() {
       <nav className="nav">
         <div className="navButton home">
           <NavLink to="/">HWARA JO</NavLink>
+        </div>
+        <div className="navButton home2">
+          <NavLink to="/"><img class="logoImg" src={logoImg} alt="logo"/> </NavLink>
         </div>
         <div className="navButton inventory">
           <NavLink to="/Inventory">INVENTORY</NavLink>

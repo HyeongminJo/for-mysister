@@ -6,8 +6,6 @@ import logoImg from './logo.png';
 
 function Home() {
   const images = [
-    "/img/1.jpg", 
-    "/img/2.jpg", 
     "/img/3.png", 
     "/img/4.png", 
     "/img/5.jpg", 
@@ -20,21 +18,29 @@ function Home() {
     "/img/12.png"
   ];
 
-  const [bgImage, setBgImage] = useState('');
+  const [bgImage, setBgImage] = useState(images[0]);
+  const shuffledImages = [...images]; // 복사한 이미지 배열
   const imageIndexRef = useRef(0);
 
+  // 이미지 배열을 무작위로 섞기
+  useEffect(() => {
+    for (let i = shuffledImages.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledImages[i], shuffledImages[j]] = [shuffledImages[j], shuffledImages[i]];
+    }
+  }, []);
+
+  // 이미지를 일정 시간마다 변경
   useEffect(() => {
     const intervalId = setInterval(() => {
-      // 이미지 인덱스를 다음 이미지로 이동
-      imageIndexRef.current = (imageIndexRef.current + 1) % images.length;
-      setBgImage(images[imageIndexRef.current]);
-    }, 400);
+      setBgImage(shuffledImages[imageIndexRef.current]);
+      imageIndexRef.current = (imageIndexRef.current + 1) % shuffledImages.length;
+    }, 4000); // 4초마다 이미지 변경
 
     return () => {
-      // 컴포넌트가 언마운트되면 clearInterval을 호출하여 인터벌을 정리합니다.
       clearInterval(intervalId);
     };
-  }, []);
+  }, [shuffledImages]);
 
     return (
     <div className="mainDivHome">
@@ -56,13 +62,6 @@ function Home() {
         </div>
       </nav>
       <div className="homeMain1" style={{backgroundImage: `url(${bgImage})`}}>
-        여기 메인임<br></br>
-        여기 메인임<br></br>
-        여기 메인임<br></br>
-        여기 메인임<br></br>
-        여기 메인임<br></br>
-        여기 메인임<br></br>
-        여기 메인임<br></br>
       </div>
       <div className="homeMain2" style={{backgroundImage: `url(${bgImage})`}}></div>
     </div>

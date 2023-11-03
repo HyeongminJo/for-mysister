@@ -18,23 +18,26 @@ function Home() {
     "/img/12.png"
   ];
 
-  const [bgImage, setBgImage] = useState(images[0]);
-  const shuffledImages = [...images]; // 복사한 이미지 배열
-  const imageIndexRef = useRef(0);
-
   // 이미지 배열을 무작위로 섞기
-  useEffect(() => {
-    for (let i = shuffledImages.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffledImages[i], shuffledImages[j]] = [shuffledImages[j], shuffledImages[i]];
-    }
-  }, []);
+  const shuffledImages = [...images];
+  for (let i = shuffledImages.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledImages[i], shuffledImages[j]] = [shuffledImages[j], shuffledImages[i]];
+  }
+
+  const [bgImage1, setBgImage1] = useState(shuffledImages[0]);
+  const [bgImage2, setBgImage2] = useState(shuffledImages[1]); // 초기 이미지를 다르게 설정
+
+  const imageIndexRef1 = useRef(0);
+  const imageIndexRef2 = useRef(1);
 
   // 이미지를 일정 시간마다 변경
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setBgImage(shuffledImages[imageIndexRef.current]);
-      imageIndexRef.current = (imageIndexRef.current + 1) % shuffledImages.length;
+      imageIndexRef1.current = (imageIndexRef1.current + 1) % shuffledImages.length;
+      imageIndexRef2.current = (imageIndexRef2.current + 1) % shuffledImages.length;
+      setBgImage1(shuffledImages[imageIndexRef1.current]);
+      setBgImage2(shuffledImages[imageIndexRef2.current]);
     }, 4000); // 4초마다 이미지 변경
 
     return () => {
@@ -61,9 +64,9 @@ function Home() {
           <NavLink to="/More">*</NavLink>
         </div>
       </nav>
-      <div className="homeMain1" style={{backgroundImage: `url(${bgImage})`}}>
+      <div className="homeMain1" style={{backgroundImage: `url(${bgImage1})`}}>
       </div>
-      <div className="homeMain2" style={{backgroundImage: `url(${bgImage})`}}></div>
+      <div className="homeMain2" style={{backgroundImage: `url(${bgImage2})`}}></div>
     </div>
   );
 }

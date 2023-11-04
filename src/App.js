@@ -72,55 +72,67 @@ function Home() {
 }
 
 function Inventory(){
-  const colors=[
-    {bgcolor:'#009884'},
-    {bgcolor:'#005528'},
-    {bgcolor:'#6EC8EB'},
-    {bgcolor:'#531916'},
-    {bgcolor:'#FED36F'},
-    {bgcolor:'#B4D2C1'},
-    {bgcolor:'#4C2859'},
-    {bgcolor:'#3981C0'},
-    {bgcolor:'#F19E46'}
-  ];
-
-  const [bgColor, setBgColor] = useState('');
-  const [bgColor2, setBgColor2] = useState('');
+  const [bgColor, setBgColor] = useState(''); // 세로 모드 배경 색상
+  const [bgColor2, setBgColor2] = useState(''); // 가로 모드 배경 색상
 
   useEffect(() => {
+    // 배경 색상 랜덤 선택
+    const colors = ['#009884', '#005528', '#6EC8EB', '#531916', '#FED36F', '#B4D2C1', '#4C2859', '#3981C0', '#F19E46'];
     const idx = Math.floor(Math.random() * colors.length);
-    setBgColor(colors[idx].bgcolor);
+    setBgColor(colors[idx]);
 
-    let idx2;
-    do {
-      idx2 = Math.floor(Math.random() * colors.length);
-    } while (idx2 === idx);
-    
-    setBgColor2(colors[idx2].bgcolor);
+    const colors2 = ['#FF5733', '#22A7F0', '#FC427B', '#F3CA40', '#C4E538', '#17C0EB', '#7158e2', '#009432'];
+    const idx2 = Math.floor(Math.random() * colors2.length);
+    setBgColor2(colors2[idx2]);
   }, []);
 
+  // 화면 방향 확인
+  useEffect(() => {
+    function handleResize() {
+      const isLandscape = window.matchMedia('(orientation: landscape)').matches;
+      if (isLandscape) {
+        document.querySelector('.navButton.about').style.backgroundColor = bgColor2;
+        document.querySelector('.navButton.more').style.backgroundColor = bgColor2;
+      } else {
+        document.querySelector('.navButton.about').style.backgroundColor = bgColor;
+        document.querySelector('.navButton.more').style.backgroundColor = bgColor;
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // 초기 로딩 시 설정
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [bgColor, bgColor2]);
+
   return (
-    <div className="mainDiv">
+    <div className="bodyDiv">
       <nav className="nav">
-        <div className="navButton home">
+        <div className="navButton home" style={{backgroundColor: bgColor}}>
           <NavLink to="/">HWARA JO</NavLink>
         </div>
-        <div className="navButton home2">
+        <div className="navButton home2" style={{backgroundColor: bgColor}}>
           <NavLink to="/"><img class="logoImg" src={logoImg} alt="logo"/> </NavLink>
         </div>
-        <div className="navButton inventory">
+        <div className="navButton inventory" style={{backgroundColor: bgColor}}>
           <NavLink to="/Inventory">INVENTORY</NavLink>
         </div>
-        <div className="navButton about">
+        <div className="navButton about" style={{backgroundColor: bgColor2}}>
           <NavLink to="/About">ABOUT</NavLink>
         </div>
-        <div className="navButton more">
+        <div className="navButton more" style={{backgroundColor: bgColor2}}>
           <NavLink to="/More">*</NavLink>
         </div>
       </nav>
-      <div className="main1" style={{backgroundColor: bgColor}}>
-        222222222<br></br>
-        222222222222<br></br> z index를 사용해서 position fixed를 한다.
+      <div className="mainDiv">
+        <div className="main1" style={{backgroundColor: bgColor}}></div>
+        <div className="main2" style={{backgroundColor: bgColor2}}></div>
+      </div>
+      <div>
+      222222222<br></br>
+        222222222222<br></br>
         22222222222<br></br>
         22222222222222<br></br>
         2222222222222<br></br>
@@ -197,55 +209,62 @@ function Inventory(){
         2222222222<br></br>
         2222222222222<br></br>
       </div>
-      <div className="main2" style={{backgroundColor: bgColor2}}></div>
     </div>
   );
 }
 
 function About() {
-  const colors=[
-    {bgcolor:'#009884'},
-    {bgcolor:'#005528'},
-    {bgcolor:'#6EC8EB'},
-    {bgcolor:'#531916'},
-    {bgcolor:'#FED36F'},
-    {bgcolor:'#B4D2C1'},
-    {bgcolor:'#4C2859'},
-    {bgcolor:'#3981C0'},
-    {bgcolor:'#F19E46'}
-  ];
-
-  const [bgColor, setBgColor] = useState('');
-  const [bgColor2, setBgColor2] = useState('');
+  const [bgColor, setBgColor] = useState(''); // 세로 모드 배경 색상
+  const [bgColor2, setBgColor2] = useState(''); // 가로 모드 배경 색상
 
   useEffect(() => {
+    // 배경 색상 랜덤 선택
+    const colors = ['#009884', '#005528', '#6EC8EB', '#531916', '#FED36F', '#B4D2C1', '#4C2859', '#3981C0', '#F19E46'];
     const idx = Math.floor(Math.random() * colors.length);
-    setBgColor(colors[idx].bgcolor);
+    setBgColor(colors[idx]);
 
-    let idx2;
-    do {
-      idx2 = Math.floor(Math.random() * colors.length);
-    } while (idx2 === idx);
-    
-    setBgColor2(colors[idx2].bgcolor);
+    const colors2 = ['#FF5733', '#22A7F0', '#FC427B', '#F3CA40', '#C4E538', '#17C0EB', '#7158e2', '#009432'];
+    const idx2 = Math.floor(Math.random() * colors2.length);
+    setBgColor2(colors2[idx2]);
   }, []);
+
+  // 화면 방향 확인
+  useEffect(() => {
+    function handleResize() {
+      const isLandscape = window.matchMedia('(orientation: landscape)').matches;
+      if (isLandscape) {
+        document.querySelector('.navButton.about').style.backgroundColor = bgColor2;
+        document.querySelector('.navButton.more').style.backgroundColor = bgColor2;
+      } else {
+        document.querySelector('.navButton.about').style.backgroundColor = bgColor;
+        document.querySelector('.navButton.more').style.backgroundColor = bgColor;
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // 초기 로딩 시 설정
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [bgColor, bgColor2]);
 
   return (
     <div className="mainDiv">
       <nav className="nav">
-        <div className="navButton home">
+        <div className="navButton home" style={{backgroundColor: bgColor}}>
           <NavLink to="/">HWARA JO</NavLink>
         </div>
-        <div className="navButton home2">
+        <div className="navButton home2" style={{backgroundColor: bgColor}}>
           <NavLink to="/"><img class="logoImg" src={logoImg} alt="logo"/> </NavLink>
         </div>
-        <div className="navButton inventory">
+        <div className="navButton inventory" style={{backgroundColor: bgColor}}>
           <NavLink to="/Inventory">INVENTORY</NavLink>
         </div>
-        <div className="navButton about">
+        <div className="navButton about" style={{backgroundColor: bgColor2}}>
           <NavLink to="/About">ABOUT</NavLink>
         </div>
-        <div className="navButton more">
+        <div className="navButton more" style={{backgroundColor: bgColor2}}>
           <NavLink to="/More">*</NavLink>
         </div>
       </nav>

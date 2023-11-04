@@ -120,7 +120,7 @@ function Inventory(){
       </nav>
       <div className="main1" style={{backgroundColor: bgColor}}>
         222222222<br></br>
-        222222222222<br></br>
+        222222222222<br></br> z index를 사용해서 position fixed를 한다.
         22222222222<br></br>
         22222222222222<br></br>
         2222222222222<br></br>

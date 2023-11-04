@@ -135,9 +135,17 @@
     display: none;
   }
 
+  .home2:hover .logoImg {
+    background-image: url(./logo2.png);
+  }
+
   .logoImg {
     height: 31px;
     width: 31px;
+    margin: auto;
+    background-image: url(./logo.png);
+    background-size: cover;
+    transition: background-image 0.4s ease;
   }
 
   .homeNav {

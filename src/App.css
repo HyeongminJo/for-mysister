@@ -108,6 +108,24 @@
     font-size: 23px;
     font-weight: 500;
   }
+
+  .aboutDiv {
+    width: 100%;
+    display: flex;
+    padding: 31px 10px;
+  }
+
+  .aboutDiv1 {
+    width: calc(50% - 10px);
+    font-size: 23px;
+    font-weight: bold;
+  }
+
+  .aboutDiv2 {
+    width: calc(50% - 10px);
+    font-size: 23px;
+    font-weight: 500;
+  }
 }
 
 @media all and (orientation:portrait){
@@ -224,5 +242,22 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 150%;
+  }
+
+  .aboutDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 31px 10px;
+  }
+
+  .aboutDiv1 {
+    display: none;
+  }
+
+  .aboutDiv2 {
+    width: calc(100% - 20px);
+    font-size: 20px;
+    font-weight: 500;
   }
 }

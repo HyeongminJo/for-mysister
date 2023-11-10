@@ -217,38 +217,37 @@ function About() {
       <div className="aboutDiv">
         <div className="aboutDiv1">
           <div className="aboutDiv3">
-            <Link to="introduction" spy={true} smooth={true}>
+            <Link to="introduction" spy={true} offset={-31} smooth={true}>
               INTORDUCTION
             </Link>
-            <Link to="solo" spy={true} smooth={true}>
+            <Link to="solo" spy={true} offset={-31} smooth={true}>
               SOLO EXHIBITION
             </Link>
-            <Link to="group" spy={true} smooth={true}>
+            <Link to="group" spy={true} offset={-31} smooth={true}>
               GROUP EXHIBITION
             </Link>
-            <Link to="award" spy={true} smooth={true}>
+            <Link to="award" spy={true} offset={-31} smooth={true}>
               AWARD
             </Link>
-            <Link to="workshop" spy={true} smooth={true}>
+            <Link to="workshop" spy={true} offset={-31} smooth={true}>
               LECTURES AND WORKSHOP
             </Link>
-            <Link to="featured" spy={true} smooth={true}>
+            <Link to="featured" spy={true} offset={-31} smooth={true}>
               FEATURED IN
             </Link>
-            <Link to="clients" spy={true} smooth={true}>
+            <Link to="clients" spy={true} offset={-31} smooth={true}>
               COLLABORATORS AND CLIENTS
             </Link>
-            <Link to="contact" spy={true} smooth={true}>
+            <Link to="contact" spy={true} offset={-31} smooth={true}>
               CONTACT
             </Link>
-            <Link to="site" spy={true} smooth={true}>
+            <Link to="site" spy={true} offset={-31} smooth={true}>
               ABOUT THIS SITE
             </Link>
           </div>
         </div>
         <div className="aboutDiv2">
-          <div id="introduction"></div>
-            <div>
+          <div id="introduction">
             INTORDUCTION1 <br></br>
             INTORDUCTION2 <br></br>
             INTORDUCTION <br></br>
@@ -355,8 +354,233 @@ function About() {
             GROUP EXHIBITION <br></br>
             GROUP EXHIBITION <br></br>
           </div>
-          <div>
-
+          <div id="award">
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+            AWARD <br></br>
+          </div>
+          <div id="workshop">
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+            WORKSHOP <br></br>
+          </div>
+          <div id="featured">
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+            FEATURED <br></br>
+          </div>
+          <div id="clients">
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+            CLIENTS <br></br>
+          </div>
+          <div id="contact">
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+            CONTACT <br></br>
+          </div>
+          <div id="site">
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
+            SITE <br></br>
           </div>
         </div>
       </div>

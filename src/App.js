@@ -217,33 +217,51 @@ function About() {
       <div className="aboutDiv">
         <div className="aboutDiv1">
           <div className="aboutDiv3">
-            <Link to="introduction" spy={true} offset={-31} smooth={true}>
-              INTORDUCTION
-            </Link>
-            <Link to="solo" spy={true} offset={-31} smooth={true}>
-              SOLO EXHIBITION
-            </Link>
-            <Link to="group" spy={true} offset={-31} smooth={true}>
-              GROUP EXHIBITION
-            </Link>
-            <Link to="award" spy={true} offset={-31} smooth={true}>
-              AWARD
-            </Link>
-            <Link to="workshop" spy={true} offset={-31} smooth={true}>
-              LECTURES AND WORKSHOP
-            </Link>
-            <Link to="featured" spy={true} offset={-31} smooth={true}>
-              FEATURED IN
-            </Link>
-            <Link to="clients" spy={true} offset={-31} smooth={true}>
-              COLLABORATORS AND CLIENTS
-            </Link>
-            <Link to="contact" spy={true} offset={-31} smooth={true}>
-              CONTACT
-            </Link>
-            <Link to="site" spy={true} offset={-31} smooth={true}>
-              ABOUT THIS SITE
-            </Link>
+            <div className="aboutNav">
+              <Link to="introduction" spy={true} offset={-31} smooth={true}>
+                INTORDUCTION
+              </Link>
+            </div>
+            <div className="aboutNav">
+              <Link to="solo" spy={true} offset={-31} smooth={true}>
+                SOLO EXHIBITION
+              </Link>
+            </div>
+            <div className="aboutNav">
+              <Link to="group" spy={true} offset={-31} smooth={true}>
+                GROUP EXHIBITION
+              </Link>
+            </div>
+            <div className="aboutNav">
+              <Link to="award" spy={true} offset={-31} smooth={true}>
+                AWARD
+              </Link>
+            </div>
+            <div className="aboutNav">
+              <Link to="workshop" spy={true} offset={-31} smooth={true}>
+                LECTURES AND WORKSHOP
+              </Link>
+            </div>
+            <div className="aboutNav">
+              <Link to="featured" spy={true} offset={-31} smooth={true}>
+                FEATURED IN
+              </Link>
+            </div>
+            <div className="aboutNav">
+              <Link to="clients" spy={true} offset={-31} smooth={true}>
+                COLLABORATORS AND CLIENTS
+              </Link>
+            </div>
+            <div className="aboutNav">
+              <Link to="contact" spy={true} offset={-31} smooth={true}>
+                CONTACT
+              </Link>
+            </div>
+            <div className="aboutNav">
+              <Link to="site" spy={true} offset={-31} smooth={true}>
+                ABOUT THIS SITE
+              </Link>
+            </div>
           </div>
         </div>
         <div className="aboutDiv2">

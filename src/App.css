@@ -23,6 +23,7 @@
   }
 
   .mainDivHome {
+    overflow-y: scroll;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -135,6 +136,19 @@
     font-size: 23px;
     font-weight: 500;
   }
+
+  .aboutNav {
+    transition-duration: 400ms;
+    cursor: pointer;
+  }
+
+  .aboutNav:active {
+    color: white;
+  }
+
+  .aboutNav:hover {
+    color: white;
+  }
 }
 
 @media all and (orientation:portrait){
@@ -150,6 +164,7 @@
   }
 
   .mainDivHome {
+    overflow-y: scroll;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -194,7 +209,7 @@
     background-color: rgba( 255, 255, 255, 0 );
     display: flex;
     justify-content: space-around;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 500;
     position: fixed;
   }

@@ -111,13 +111,13 @@
   }
 
   .aboutDiv {
-    width: 100%;
+    width: calc(100% - 20px);
     display: flex;
     padding: 31px 10px;
   }
 
   .aboutDiv1 {
-    width: calc(50% - 10px);
+    width: 50%;
     font-size: 23px;
     font-weight: 500;
     display: flex;
@@ -132,7 +132,7 @@
   }
 
   .aboutDiv2 {
-    width: calc(50% - 10px);
+    width: 50%;
     font-size: 23px;
     font-weight: 500;
   }
@@ -269,7 +269,7 @@
   }
 
   .aboutDiv {
-    width: 100%;
+    width: calc(100% - 20px);
     display: flex;
     flex-direction: column;
     padding: 31px 10px;

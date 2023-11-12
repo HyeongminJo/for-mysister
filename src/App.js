@@ -3,7 +3,9 @@ import './App.css';
 import { HashRouter, Route, Routes, NavLink, useParams } from 'react-router-dom';
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
+import { Helmet } from 'react-helmet';
 import logoImg from './logo.png';
+
 
 function Home() {
   const images = [
@@ -48,6 +50,9 @@ function Home() {
 
     return (
     <div className="mainDivHome">
+      <Helmet>
+        <title>HWARA JO</title>
+      </Helmet>
       <nav className="homeNav">
         <div className="navButton home">
           <NavLink to="/">HWARA JO</NavLink>
@@ -110,6 +115,9 @@ function Inventory(){
 
   return (
     <div className="bodyDiv">
+      <Helmet>
+        <title>INVENTORY - HWARA JO</title>
+      </Helmet>
       <nav className="nav">
         <div className="navButton home" style={{backgroundColor: bgColor}}>
           <NavLink to="/">HWARA JO</NavLink>
@@ -135,6 +143,114 @@ function Inventory(){
         <div>
           <div class="projectsList">
             <div class="items">
+              <div class="item">
+                12222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                12222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                12222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                12222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                12222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                12222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                12222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                12222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                12222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
+              <div class="item">
+                2222
+              </div>
               <div class="item">
                 12222
               </div>
@@ -193,6 +309,9 @@ function About() {
 
   return (
     <div className="bodyDiv">
+      <Helmet>
+        <title>ABOUT - HWARA JO</title>
+      </Helmet>
       <nav className="nav">
         <div className="navButton home" style={{backgroundColor: bgColor}}>
           <NavLink to="/">HWARA JO</NavLink>
@@ -218,47 +337,47 @@ function About() {
         <div className="aboutDiv1">
           <div className="aboutDiv3">
             <div className="aboutNav">
-              <Link to="introduction" spy={true} offset={-31} smooth={true}>
+              <Link to="introduction" spy={true} offset={-31} smooth={true} duration={400} activeStyle={{ color: 'white' }}>
                 INTORDUCTION
               </Link>
             </div>
             <div className="aboutNav">
-              <Link to="solo" spy={true} offset={-31} smooth={true}>
+              <Link to="solo" spy={true} offset={-31} smooth={true} duration={400} activeStyle={{ color: 'white' }}>
                 SOLO EXHIBITION
               </Link>
             </div>
             <div className="aboutNav">
-              <Link to="group" spy={true} offset={-31} smooth={true}>
+              <Link to="group" spy={true} offset={-31} smooth={true} duration={400} activeStyle={{ color: 'white' }}>
                 GROUP EXHIBITION
               </Link>
             </div>
             <div className="aboutNav">
-              <Link to="award" spy={true} offset={-31} smooth={true}>
+              <Link to="award" spy={true} offset={-31} smooth={true} duration={400} activeStyle={{ color: 'white' }}>
                 AWARD
               </Link>
             </div>
             <div className="aboutNav">
-              <Link to="workshop" spy={true} offset={-31} smooth={true}>
+              <Link to="workshop" spy={true} offset={-31} smooth={true} duration={400} activeStyle={{ color: 'white' }}>
                 LECTURES AND WORKSHOP
               </Link>
             </div>
             <div className="aboutNav">
-              <Link to="featured" spy={true} offset={-31} smooth={true}>
+              <Link to="featured" spy={true} offset={-31} smooth={true} duration={400} activeStyle={{ color: 'white' }}>
                 FEATURED IN
               </Link>
             </div>
             <div className="aboutNav">
-              <Link to="clients" spy={true} offset={-31} smooth={true}>
+              <Link to="clients" spy={true} offset={-31} smooth={true} duration={400} activeStyle={{ color: 'white' }}>
                 COLLABORATORS AND CLIENTS
               </Link>
             </div>
             <div className="aboutNav">
-              <Link to="contact" spy={true} offset={-31} smooth={true}>
+              <Link to="contact" spy={true} offset={-31} smooth={true} duration={400} activeStyle={{ color: 'white' }}>
                 CONTACT
               </Link>
             </div>
             <div className="aboutNav">
-              <Link to="site" spy={true} offset={-31} smooth={true}>
+              <Link to="site" spy={true} offset={-31} smooth={true} duration={400} activeStyle={{ color: 'white' }}>
                 ABOUT THIS SITE
               </Link>
             </div>
@@ -644,6 +763,9 @@ function More() {
 
   return (
     <div className="bodyDiv">
+      <Helmet>
+        <title>* - HWARA JO</title>
+      </Helmet>
       <nav className="nav">
         <div className="navButton home" style={{backgroundColor: bgColor}}>
           <NavLink to="/">HWARA JO</NavLink>

@@ -113,6 +113,14 @@ function Inventory(){
     };
   }, [bgColor, bgColor2]);
 
+  //아이템박스
+  const [itemHeight, setItemHeight] = useState(Array(40).fill('auto')); // 40은 예시 아이템 개수, 각 아이템의 초기 높이를 'auto'로 설정
+
+  const handleItemClick = (index) => {
+    const newHeight = itemHeight.map((height, idx) => (idx === index ? '350px' : 'auto')); // 클릭한 아이템은 350px, 나머지는 'auto'로 설정
+    setItemHeight(newHeight);
+  };
+
   return (
     <div className="bodyDiv">
       <Helmet>
@@ -143,6 +151,19 @@ function Inventory(){
         <div>
           <div class="projectsList">
             <div class="items">
+            {Array(40) // 예시 아이템 개수만큼 반복
+          .fill()
+          .map((_, index) => (
+            <div
+              className="item"
+              style={{ height: itemHeight[index] }} // 각 아이템의 높이를 상태값에 따라 변경
+              key={index}
+              onClick={() => handleItemClick(index)} // 클릭 시 해당 아이템 높이 변경 함수 호출
+            >
+              {/* 여기에 아이템 텍스트 또는 컨텐츠 */}
+              Item {index}
+            </div>
+          ))}
               <div class="item">
                 12222
               </div>

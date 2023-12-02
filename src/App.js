@@ -168,7 +168,7 @@ function Inventory(){
                 12222
               </div>
               <div class="item">
-                22222222222aaa
+                22222222222aaaa
               </div>
               <div class="item">
                 2222

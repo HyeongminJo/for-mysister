@@ -113,12 +113,16 @@ function Inventory(){
     };
   }, [bgColor, bgColor2]);
 
-  //아이템박스
-  const [itemHeight, setItemHeight] = useState(Array(40).fill('auto')); // 40은 예시 아이템 개수, 각 아이템의 초기 높이를 'auto'로 설정
+  //게시글
+  const [items] = useState([
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+  ]);
+
+  const [expandedItem, setExpandedItem] = useState(null);
 
   const handleItemClick = (index) => {
-    const newHeight = itemHeight.map((height, idx) => (idx === index ? '350px' : 'auto')); // 클릭한 아이템은 350px, 나머지는 'auto'로 설정
-    setItemHeight(newHeight);
+    setExpandedItem(index === expandedItem ? null : index);
   };
 
   return (
@@ -151,139 +155,17 @@ function Inventory(){
         <div>
           <div class="projectsList">
             <div class="items">
-            {Array(40) // 예시 아이템 개수만큼 반복
-          .fill()
-          .map((_, index) => (
-            <div
-              className="item"
-              style={{ height: itemHeight[index] }} // 각 아이템의 높이를 상태값에 따라 변경
-              key={index}
-              onClick={() => handleItemClick(index)} // 클릭 시 해당 아이템 높이 변경 함수 호출
-            >
-              {/* 여기에 아이템 텍스트 또는 컨텐츠 */}
-              Item {index}
-            </div>
-          ))}
-              <div class="item">
-                12222
-              </div>
-              <div class="item">
-                22222222222aaaaa!
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                12222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                12222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                12222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                12222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                12222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                12222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                12222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                12222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                12222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
-              <div class="item">
-                2222
-              </div>
+              {items.map((item, index) => (
+                <div
+                  className="item"
+                  key={index}
+                  style={{ height: expandedItem === index ? '350px' : 'auto' }}
+                  onClick={() => handleItemClick(index)}
+                >
+                  <p>{item.title}</p>
+                  <p>{item.content}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -164,6 +164,7 @@ function Inventory(){
                 >
                   <p>{item.title}</p>
                   <p>{item.content}</p>
+                  <p></p>
                 </div>
               ))}
             </div>

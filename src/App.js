@@ -117,6 +117,48 @@ function Inventory(){
   const [items] = useState([
     { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
     { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
+    { title: '첫 번째 아이템', content: '첫 번째 아이템의 내용입니다.' },
+    { title: '두 번째 아이템', content: '두 번째 아이템의 내용입니다.' },
   ]);
 
   const [expandedItem, setExpandedItem] = useState(null);
@@ -159,12 +201,10 @@ function Inventory(){
                 <div
                   className="item"
                   key={index}
-                  style={{ height: expandedItem === index ? '350px' : 'auto' }}
+                  style={{ height: expandedItem === index ? '300px' : '31px' }}
                   onClick={() => handleItemClick(index)}
                 >
-                  <p>{item.title}</p>
-                  <p>{item.content}</p>
-                  <p>xx</p>
+                  {item.title}
                 </div>
               ))}
             </div>

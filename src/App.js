@@ -204,7 +204,7 @@ function Inventory(){
                   style={{ height: expandedItem === index ? '300px' : '31px' }}
                   onClick={() => handleItemClick(index)}
                 >
-                  {item.title}x
+                  {item.title}
                 </div>
               ))}
             </div>
